@@ -17,7 +17,7 @@ body {
   overflow-x: hidden !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #195769;
+  background-color: #3C5C8E;
   color: white;
 }
 
@@ -76,7 +76,7 @@ header .location_name {
   height: 100%;
   padding: 12px 20px;
   color: #FFFFFF;
-  border-right: 1px solid #FFFFFF;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 header .location_name img {
@@ -183,18 +183,25 @@ main .heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 32px;
   overflow: hidden;
-  margin-bottom: 10px;
-  margin-top: 5px;
+  margin-bottom: 12px;
+  margin-top: 15px;
   margin-left: 10px;
+}
+
+main .heading h5 {
+  font-size: 18px;
+}
+
+main .heading p {
+  font-size: 13px;
+  line-height: 5px;
+  font-weight: normal;
 }
 
 main .heading img {
@@ -205,166 +212,197 @@ main .heading img {
   border: 1px solid;
 }
 
-main .details {
-  background-image: url("../images/Rain1.png");
-  height: 270px;
-  width: 612px;
-  border-radius: 6px;
-  padding: 15px 18px;
+main .day-details {
+  margin-bottom: 2rem;
 }
 
-main .details .details_content {
-  margin-bottom: 18px;
-}
-
-main .details .details_content .details_content_time h6 {
-  margin-bottom: 0;
-}
-
-main .details .details_content .details_content_temp {
+main .day-details .WeatherSummary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .details .details_content .details_content_temp span {
-  margin-left: 8px;
-  font-size: 64px;
+main .day-details .WeatherSummary .OverviewCurrentTemperature {
+  line-height: 96px;
+  font-size: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2rem;
 }
 
-main .details .details_content .details_content_temp .details_content_temp_day {
-  margin-top: 22px;
-  margin-left: 35px;
+main .day-details .WeatherSummary .OverviewCurrentTemperature img {
+  max-width: 85px;
 }
 
-main .details .details_content .details_content_temp .details_content_temp_day h5 {
-  margin-bottom: 5px;
+main .day-details .WeatherSummary .OverviewCurrentTemperature span {
+  margin: 0 0 0 10px;
 }
 
-main .details .details_content .details_content_temp .details_content_temp_day span {
-  font-size: 14px;
+main .day-details .WeatherSummary .OverviewCurrentTemperature .f_or_c {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 10px 0 10px;
+}
+
+main .day-details .WeatherSummary .OverviewCurrentTemperature .f_or_c p {
+  margin: 0;
+}
+
+main .day-details .WeatherSummary .CurrentWeatherSummary .CurrentWeatherHeading {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 10px 0 5px 0;
+}
+
+main .day-details .WeatherSummary .CurrentWeatherSummary .CurrentWeatherHeading button {
+  border: none;
+  background: none;
+  margin-left: 5px;
+}
+
+main .day-details .WeatherSummary .CurrentWeatherSummary p {
   opacity: 0.8;
-  margin-left: 0;
 }
 
-main .details .details_content_temp_all {
+main .day-details .detailLine {
+  margin: 15px 10px;
+}
+
+main .day-details .detailLine .detail_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-main .details .details_content_temp_all .all {
-  padding-right: 72px;
-}
-
-main .details .details_content_temp_all .all span {
-  font-size: 12px;
-  opacity: 0.7;
-}
-
-main .map {
-  width: 300px;
-  height: 270px;
-}
-
-main .map a {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-main .map a .img_map_1 {
-  display: block;
-  margin: 0;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-main .map a .img_map_2 {
-  display: block;
-  margin: 0;
-  max-width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0.55;
-  border-radius: 6px;
-}
-
-main .map a .map_l {
-  overflow: hidden;
-  -o-object-fit: none !important;
-     object-fit: none !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-main .map a .map_l .map_p {
-  position: absolute;
-  cursor: pointer;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  pointer-events: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  overflow: visible;
-  background: #ffd02e;
-  border: 3px solid #FFF;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .day-details .detailLine .detail_item img {
+  width: 25px;
+  opacity: 0.8;
+}
+
+main .day-details .detailLine .detail_item .item_text {
+  padding-left: 5px;
+}
+
+main .day-details .detailLine .detail_item .item_text p {
+  margin: 10px 0 5px 0px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 16px;
+  opacity: 0.8;
+}
+
+main .day-details .detailLine .detail_item .item_text h6 {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+main .week-details .detail_item {
+  width: 150px;
+  background: rgba(255, 255, 255, 0.08);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 10;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-main .map a .map_l .map_p:before {
-  content: ' ';
-  display: block;
-  width: 12px;
-  height: 12px;
-  min-width: 12px;
-  border-radius: 50%;
-  -webkit-animation: locationPinBorder 2s ease-out;
-          animation: locationPinBorder 2s ease-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+main .week-details .detail_item .iconBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .week-details .detail_item .iconBody img {
+  width: 30px;
+}
+
+main .week-details .detail_item .iconBody .precipitation {
+  margin-top: -16px;
+  margin-left: 7px;
+}
+
+main .week-details .detail_item .iconBody .precipitation img {
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  margin-right: 2px;
+}
+
+main .week-details .detail_item h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+main .map {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+main .map iframe {
+  border-radius: 4px;
+}
+
+@media (max-width: 991px) {
+  main .day-details .WeatherSummary {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  header .search {
+    width: 280px;
+  }
+  header .location_name {
+    display: none;
+  }
+  header .DtoF {
+    float: right;
+  }
+}
+
+@media (max-width: 576px) {
+  header .search {
+    width: 260px;
+  }
+}
+
+@media (max-width: 415px) {
+  main {
+    padding: 0 45px !important;
+  }
+}
+
+@media (max-width: 376px) {
+  header .search {
+    width: 240px;
+  }
+  main {
+    padding: 0 25px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
